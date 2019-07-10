@@ -30,6 +30,9 @@ HTTP 的 CORS Request
 
 By default, `axios` serializes JavaScript objects to `JSON`. To send data in the `application/x-www-form-urlencoded` format instead, you can use one of the following options.
 
+# 第三方金流
+
+由前端form表單提交  
 
 ## Project setup
 ```
