@@ -29,6 +29,7 @@ es8 的 async await 讓異步變成了同步的寫法，
 
 [vue中Axios的封装和API接口的管理](https://juejin.im/post/5b55c118f265da0f6f1aa354)
 [聊聊 Vue 中 axios 的封装](https://juejin.im/post/5da90c3e6fb9a04e031c0413)
+[vue-cli axios.all 如何让请求按顺序执行](https://segmentfault.com/q/1010000018122601)
 [JavaScript async/await 的奇淫技巧](https://fred-zone.blogspot.com/2017/04/javascript-asyncawait.html)  實現 delay 函數
 
 ## Project setup
