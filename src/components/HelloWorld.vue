@@ -31,8 +31,8 @@ export default {
     async onLoad() {
       // 调用api接口，并且提供了两个参数
       await apiComments({
-        type: 0,
-        sort: 1,
+        // type: 0,
+        // sort: 1,
       }).then((res) => {
         // 获取数据成功后的其他操作
         this.comments = res[0]
