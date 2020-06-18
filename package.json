@@ -1,12 +1,14 @@
 {
   "name": "vue-axios",
   "version": "0.1.0",
+  "homepage": "https://jacobhsu.github.io/vue-axios/",
   "private": true,
   "scripts": {
     "server": "json-server --watch db.json",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "yarn build && gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -22,6 +24,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "gh-pages": "^3.0.0",
     "vue-template-compiler": "^2.6.10"
   }
 }
