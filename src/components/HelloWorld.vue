@@ -1,17 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>
-      posts: {{posts}}
-    </p>
-    <p>
-      comments: {{comments}}
-    </p>
+    <p>posts: {{ posts }}</p>
+    <p>comments: {{ comments }}</p>
+    <p>profile: {{ profile }}</p>
   </div>
 </template>
 
 <script>
-import { apiComments, apiGetPosts, delay2s } from "@/request/api";
+import { apiComments, apiGetPosts, delay2s, apiProfile } from "@/request/api";
 export default {
   name: "HelloWorld",
   props: {
@@ -24,6 +21,7 @@ export default {
     return {
       posts: "",
       comments: "",
+      profile: "",
     };
   },
   methods: {
@@ -35,14 +33,20 @@ export default {
         // sort: 1,
       }).then((res) => {
         // 获取数据成功后的其他操作
-        this.comments = res[0]
-        console.log('comments',res);
+        this.comments = res[0];
+        console.log("comments", res);
       });
-      await delay2s()
+      await delay2s();
+
+      apiProfile().then((res) => {
+        this.profile = res;
+        console.log("profile", res);
+      });
+
       await apiGetPosts().then((res) => {
         // 获取数据成功后的其他操作
-        this.posts = res[0]
-        console.log('posts',res);
+        this.posts = res[0];
+        console.log("posts", res);
       });
     },
   },
